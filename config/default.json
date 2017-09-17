@@ -1,5 +1,6 @@
 {
   "host": "localhost",
   "port": 3030,
-  "public": "../public/"
+  "public": "../public/",
+  "mongodb": "mongodb://localhost:27017/audiogram"
 }

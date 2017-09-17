@@ -1,10 +1,9 @@
 const assert = require('assert');
 const app = require('../../src/app');
 
-describe('\'graphiql\' service', () => {
+describe('\'voxels\' service', () => {
   it('registered the service', () => {
-    const service = app.service('graphiql');
-
+    const service = app.service('voxels');
     assert.ok(service, 'Registered the service');
   });
 });
