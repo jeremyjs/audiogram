@@ -1,8 +1,10 @@
-import { GraphQLString } from 'graphql';
+const { GraphQLString } = require('graphql');
 
-export default hello = {
+const hello = {
   type: GraphQLString,
   resolve() {
     return 'world';
-  }
-}
+  },
+};
+
+module.exports = hello;

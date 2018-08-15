@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
-import { schema } from '../../graphql';
-import { graphql } from 'graphql';
+const { graphql } = require('graphql');
+const schema = require('../../graphql');
 
 class Service {
   constructor (options) {

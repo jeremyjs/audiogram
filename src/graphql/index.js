@@ -1,19 +1,14 @@
-import { GraphQLSchema, GraphQLObjectType } from 'graphql';
-import hello from './types/hello'
-import setHello from './types/setHello'
+const { GraphQLSchema, GraphQLObjectType } = require('graphql');
+const hello = require('./types/hello');
+// const setHello = require('./types/setHello');
 
-export const schema = new GraphQLSchema({
+const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
       hello,
     },
   }),
-
-  mutation: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      setHello,
-    },
-  }),
 });
+
+module.exports = schema;

@@ -1,7 +1,5 @@
-// voxels-model.js - A mongoose model
-//
-// See http://mongoosejs.com/docs/models.html
-// for more of what you can do here.
+const soundFilesSchema = require('./soundFiles.model.js');
+
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
@@ -10,8 +8,8 @@ module.exports = function (app) {
     title: { type: String, required: true },
 
     coverImgId: { type: String, required: false },
-    ownerId: { type: String, required: false },
-    soundFileId: { type: String, required: true },
+    ownerId:    { type: String, required: false },
+    soundFile:  { type: soundFilesSchema(app), required: true },
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
